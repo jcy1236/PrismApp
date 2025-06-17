@@ -1,6 +1,6 @@
 ﻿using Prism.Ioc;
 using Prism.Modularity;
-using PrismApp.Modules.VxStudio;
+using PrismApp.Modules.BaseApp;
 using PrismApp.Modules.WMXLoader;
 using PrismApp.Services;
 using PrismApp.Services.Interfaces;
@@ -26,7 +26,7 @@ namespace PrismApp
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
-            moduleCatalog.AddModule<VxStudio>();
+            moduleCatalog.AddModule<BaseApp>();
             moduleCatalog.AddModule<WMXLoaderModule>(); // WMXLoader 모듈 추가
         }
     }

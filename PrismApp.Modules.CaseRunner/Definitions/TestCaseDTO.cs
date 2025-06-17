@@ -4,13 +4,13 @@ using System.Text.Json.Serialization;
 public class TestCaseDTO
 {
     [JsonPropertyName("title")]
-    public string Title { get; set; } = string.Empty;
+    public string Title { get; set; }
 
     [JsonPropertyName("description")]
-    public string Description { get; set; } = string.Empty;
+    public string Description { get; set; }
 
     [JsonPropertyName("precondition")]
-    public string Precondition { get; set; } = string.Empty;
+    public string Precondition { get; set; }
 
     // public FolderData Folder { get; set; }
     
@@ -131,12 +131,12 @@ public class TestCaseDTO
         }
     }
 
-    public class AutomationStatusData
-    {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public int ID { get; set; }
-    }
+    //public class AutomationStatusData
+    //{
+    //    public string Name { get; set; }
+    //    public string Description { get; set; }
+    //    public int ID { get; set; }
+    //}
 
     public class TestStep
     {
@@ -166,20 +166,20 @@ public class TestCaseDTO
 
 
         // Inner Class
-        public class ReferencedCaseData
-        {
-            [JsonPropertyName("ID")]
-            public int ID { get; set; }
+        //public class ReferencedCaseData
+        //{
+        //    [JsonPropertyName("ID")]
+        //    public int ID { get; set; }
             
-            [JsonPropertyName("key")]
-            public string Key { get; set; }
+        //    [JsonPropertyName("key")]
+        //    public string Key { get; set; }
             
-            [JsonPropertyName("jiraProjectID")]
-            public int JiraProjectID { get; set; }
+        //    [JsonPropertyName("jiraProjectID")]
+        //    public int JiraProjectID { get; set; }
             
-            [JsonPropertyName("version")]
-            public int Version { get; set; }
-        }
+        //    [JsonPropertyName("version")]
+        //    public int Version { get; set; }
+        //}
     }
 
     #endregion

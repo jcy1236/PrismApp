@@ -1,7 +1,7 @@
-﻿<UserControl x:Class="PrismApp.Modules.VxStudio.Views.ViewA"
+﻿<UserControl x:Class="PrismApp.Modules.BaseApp.Views.ViewA"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:PrismApp.Modules.VxStudio.Views"
+             xmlns:local="clr-namespace:PrismApp.Modules.BaseApp.Views"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True" >
     <Grid>

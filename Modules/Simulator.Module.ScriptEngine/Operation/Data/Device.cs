@@ -1,5 +1,4 @@
-﻿using Microsoft.Xaml.Behaviors.Core;
-using PrismApp.Modules.ScriptEngine.Definitions;
+﻿using PrismApp.Modules.ScriptEngine.Definitions;
 using PrismApp.Modules.WMXLoader;
 using System.Collections.Concurrent;
 

@@ -3,15 +3,15 @@ using Prism.Modularity;
 using Prism.Regions;
 using PrismApp.Core;
 using PrismApp.Modules.ScriptEngine.Operation;
-using PrismApp.Modules.VxStudio.Views;
+using PrismApp.Modules.BaseApp.Views;
 
-namespace PrismApp.Modules.VxStudio
+namespace PrismApp.Modules.BaseApp
 {
-    public class VxStudio : IModule
+    public class BaseApp : IModule
     {
         private readonly IRegionManager _regionManager;
 
-        public VxStudio(IRegionManager regionManager)
+        public BaseApp(IRegionManager regionManager)
         {
             _regionManager = regionManager;
         }

@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Modules.ScriptEngi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScriptProject", "ScriptProject\ScriptProject.csproj", "{F49E104D-28D5-4BD4-AEB4-D778A932088A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Modules.VxStudio", "PrismApp\Modules\PrismApp.Modules.VxStudio\PrismApp.Modules.VxStudio.csproj", "{AFA8115B-0931-6579-34F0-2435A62D4735}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Modules.BaseApp", "PrismApp\Modules\PrismApp.Modules.BaseApp\PrismApp.Modules.BaseApp.csproj", "{AFA8115B-0931-6579-34F0-2435A62D4735}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Modules.CaseRunner", "PrismApp.Modules.CaseRunner\PrismApp.Modules.CaseRunner.csproj", "{04C4484D-53BA-46F6-A9A8-E2C0348C1473}"
 EndProject
