@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrismApp", "PrismApp\PrismA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrismApp.Core", "PrismApp\PrismApp.Core\PrismApp.Core.csproj", "{A6CA722B-7684-4420-8E1D-A1AD5DB3DC77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Modules.WMXLoader", "PrismApp\Modules\PrismApp.Modules.WMXLoader\PrismApp.Modules.WMXLoader.csproj", "{7E7BBA12-FF69-4069-9E47-06B2D19BBB3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
