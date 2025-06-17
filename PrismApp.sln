@@ -5,11 +5,7 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7DCDAF4C-8709-47B2-AEC0-13D1D68CE1FB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrismApp.Modules.ModuleName.Tests", "PrismApp\Tests\PrismApp.Modules.ModuleName.Tests\PrismApp.Modules.ModuleName.Tests.csproj", "{DFE764CF-6465-4586-A895-795BEEAAB358}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{A9E58113-6AD0-405F-9AB9-D3F6463B12F5}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrismApp.Modules.VxStudio", "PrismApp\Modules\PrismApp.Modules.ModuleName\PrismApp.Modules.VxStudio.csproj", "{AC10AFF3-5167-468D-9340-ACCC6A40FE50}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{308CB7B5-46F9-4E31-9633-3A6374A531CD}"
 EndProject
@@ -27,20 +23,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Modules.ScriptEngi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScriptProject", "ScriptProject\ScriptProject.csproj", "{F49E104D-28D5-4BD4-AEB4-D778A932088A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApp.Modules.VxStudio", "PrismApp\Modules\PrismApp.Modules.VxStudio\PrismApp.Modules.VxStudio.csproj", "{AFA8115B-0931-6579-34F0-2435A62D4735}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DFE764CF-6465-4586-A895-795BEEAAB358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DFE764CF-6465-4586-A895-795BEEAAB358}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DFE764CF-6465-4586-A895-795BEEAAB358}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DFE764CF-6465-4586-A895-795BEEAAB358}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AC10AFF3-5167-468D-9340-ACCC6A40FE50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC10AFF3-5167-468D-9340-ACCC6A40FE50}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC10AFF3-5167-468D-9340-ACCC6A40FE50}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC10AFF3-5167-468D-9340-ACCC6A40FE50}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AF7C887F-D03B-4FE6-8E8B-57F6F5732D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AF7C887F-D03B-4FE6-8E8B-57F6F5732D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF7C887F-D03B-4FE6-8E8B-57F6F5732D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -69,17 +59,20 @@ Global
 		{F49E104D-28D5-4BD4-AEB4-D778A932088A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F49E104D-28D5-4BD4-AEB4-D778A932088A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F49E104D-28D5-4BD4-AEB4-D778A932088A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFA8115B-0931-6579-34F0-2435A62D4735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFA8115B-0931-6579-34F0-2435A62D4735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFA8115B-0931-6579-34F0-2435A62D4735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFA8115B-0931-6579-34F0-2435A62D4735}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{DFE764CF-6465-4586-A895-795BEEAAB358} = {7DCDAF4C-8709-47B2-AEC0-13D1D68CE1FB}
-		{AC10AFF3-5167-468D-9340-ACCC6A40FE50} = {A9E58113-6AD0-405F-9AB9-D3F6463B12F5}
 		{AF7C887F-D03B-4FE6-8E8B-57F6F5732D67} = {308CB7B5-46F9-4E31-9633-3A6374A531CD}
 		{9826E11A-1CE3-4FDE-A47D-D786DD854894} = {308CB7B5-46F9-4E31-9633-3A6374A531CD}
 		{7E7BBA12-FF69-4069-9E47-06B2D19BBB3D} = {A9E58113-6AD0-405F-9AB9-D3F6463B12F5}
 		{7B4A3962-E983-40E9-A51C-73540CCE373E} = {A9E58113-6AD0-405F-9AB9-D3F6463B12F5}
+		{AFA8115B-0931-6579-34F0-2435A62D4735} = {A9E58113-6AD0-405F-9AB9-D3F6463B12F5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D7394AB1-D3F0-4D78-8A59-ECFFBBB2BDC7}

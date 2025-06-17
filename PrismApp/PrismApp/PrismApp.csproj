@@ -8,8 +8,8 @@
     <PackageReference Include="Prism.Unity" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Modules\PrismApp.Modules.ModuleName\PrismApp.Modules.VxStudio.csproj" />
     <ProjectReference Include="..\Modules\PrismApp.Modules.WMXLoader\PrismApp.Modules.WMXLoader.csproj" />
+    <ProjectReference Include="..\Modules\PrismApp.Modules.VxStudio\PrismApp.Modules.VxStudio.csproj" />
     <ProjectReference Include="..\PrismApp.Core\PrismApp.Core.csproj" />
     <ProjectReference Include="..\Services\PrismApp.Services.Interfaces\PrismApp.Services.Interfaces.csproj" />
     <ProjectReference Include="..\Services\PrismApp.Services\PrismApp.Services.csproj" />
