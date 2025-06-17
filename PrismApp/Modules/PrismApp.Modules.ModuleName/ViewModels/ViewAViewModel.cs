@@ -2,7 +2,7 @@
 using PrismApp.Core.Mvvm;
 using PrismApp.Services.Interfaces;
 
-namespace PrismApp.Modules.ModuleName.ViewModels
+namespace PrismApp.Modules.VxStudio.ViewModels
 {
     public class ViewAViewModel : RegionViewModelBase
     {

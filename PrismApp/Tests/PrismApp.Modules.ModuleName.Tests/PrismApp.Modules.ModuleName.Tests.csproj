@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Modules\PrismApp.Modules.ModuleName\PrismApp.Modules.ModuleName.csproj" />
+    <ProjectReference Include="..\..\Modules\PrismApp.Modules.ModuleName\PrismApp.Modules.VxStudio.csproj" />
   </ItemGroup>
 
 </Project>

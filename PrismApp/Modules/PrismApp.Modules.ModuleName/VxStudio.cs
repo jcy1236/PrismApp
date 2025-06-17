@@ -2,15 +2,16 @@
 using Prism.Modularity;
 using Prism.Regions;
 using PrismApp.Core;
-using PrismApp.Modules.ModuleName.Views;
+using PrismApp.Modules.ScriptEngine.Operation;
+using PrismApp.Modules.VxStudio.Views;
 
-namespace PrismApp.Modules.ModuleName
+namespace PrismApp.Modules.VxStudio
 {
-    public class ModuleNameModule : IModule
+    public class VxStudio : IModule
     {
         private readonly IRegionManager _regionManager;
 
-        public ModuleNameModule(IRegionManager regionManager)
+        public VxStudio(IRegionManager regionManager)
         {
             _regionManager = regionManager;
         }
@@ -23,6 +24,7 @@ namespace PrismApp.Modules.ModuleName
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<ViewA>();
+            containerRegistry.RegisterSingleton<OperationManager>();
         }
     }
 }

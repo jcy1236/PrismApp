@@ -1,6 +1,6 @@
 ﻿using Prism.Ioc;
 using Prism.Modularity;
-using PrismApp.Modules.ModuleName;
+using PrismApp.Modules.VxStudio;
 using PrismApp.Services;
 using PrismApp.Services.Interfaces;
 using PrismApp.Views;
@@ -25,7 +25,8 @@ namespace PrismApp
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
-            moduleCatalog.AddModule<ModuleNameModule>();
+            moduleCatalog.AddModule<VxStudio>();
+
         }
     }
 }

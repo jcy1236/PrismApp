@@ -1,10 +1,10 @@
 ﻿using Moq;
 using Prism.Regions;
-using PrismApp.Modules.ModuleName.ViewModels;
+using PrismApp.Modules.VxStudio.ViewModels;
 using PrismApp.Services.Interfaces;
 using Xunit;
 
-namespace PrismApp.Modules.ModuleName.Tests.ViewModels
+namespace PrismApp.Modules.VxStudio.Tests.ViewModels
 {
     public class ViewAViewModelFixture
     {

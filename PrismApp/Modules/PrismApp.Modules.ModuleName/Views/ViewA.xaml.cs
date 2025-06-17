@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PrismApp.Modules.ModuleName.Views
+namespace PrismApp.Modules.VxStudio.Views
 {
     /// <summary>
     /// Interaction logic for ViewA.xaml

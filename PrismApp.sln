@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrismApp.Modules.ModuleName
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{A9E58113-6AD0-405F-9AB9-D3F6463B12F5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrismApp.Modules.ModuleName", "PrismApp\Modules\PrismApp.Modules.ModuleName\PrismApp.Modules.ModuleName.csproj", "{AC10AFF3-5167-468D-9340-ACCC6A40FE50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrismApp.Modules.VxStudio", "PrismApp\Modules\PrismApp.Modules.ModuleName\PrismApp.Modules.VxStudio.csproj", "{AC10AFF3-5167-468D-9340-ACCC6A40FE50}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{308CB7B5-46F9-4E31-9633-3A6374A531CD}"
 EndProject
