@@ -1,15 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Prism.Core" Version="8.1.97" />
+    <PackageReference Include="Prism.Unity" Version="8.1.97" />
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Modules\Simulator.Module.ScriptEngine\PrismApp.Modules.ScriptEngine.csproj" />
+    <Folder Include="Definitions\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\PrismApp.Core\PrismApp.Core.csproj" />
-    <ProjectReference Include="..\..\Services\PrismApp.Services.Interfaces\PrismApp.Services.Interfaces.csproj" />
   </ItemGroup>
 </Project>

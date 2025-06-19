@@ -18,7 +18,7 @@ namespace PrismApp.Modules.BaseApp
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            _regionManager.RequestNavigate(RegionNames.ContentRegion, "ViewA");
+            _regionManager.RequestNavigate(RegionNames.ContentRegion, "CaseRunnerView");
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
