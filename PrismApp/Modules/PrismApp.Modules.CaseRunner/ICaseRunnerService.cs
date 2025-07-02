@@ -1,22 +1,19 @@
 ﻿using PrismApp.Modules.CaseRunner.Models;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace PrismApp.Modules.CaseRunner
 {
     public interface ICaseRunnerService
     {
-        string dummy1();
+        public Task<AioTestCase> Feature1(string testCaseId);
 
-        void dummy2(string caseId);
+        public void Feature2(string testCaeId);
 
-        public Task<AioTestCase> Feature1();
+        public void Feature3(string testCaeId);
 
-        public void Feature2();
+        public void Feature4(AioTestCase newCase);
 
-        public void Feature3();
-
-        public void Feature4();
-
-        public void Feature5();
+        public Task<IEnumerable<AioTestCase>> Feature5Async();
     }
 }

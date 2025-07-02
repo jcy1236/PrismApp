@@ -19,9 +19,11 @@ namespace PrismApp.Modules.CaseRunner
         public AioTestCase CurrentTestCase { get; private set; } = null;
 
         private ITestCaseManager jira = null;
+
         //private AioProjectInfo jiraProject = null;
-        private string jiraProjectId = string.Empty;
-        private string testCaseId = string.Empty;
+
+        public string JiraProjectId { get; set; } = string.Empty;
+        public string TestCaseId { get; set; } = string.Empty;
 
         private AioTestCase newCase = null;
 
@@ -35,8 +37,8 @@ namespace PrismApp.Modules.CaseRunner
             //    Description = "This is a sample project description."
             //};
 
-            jiraProjectId = "RES";
-            testCaseId = "RES-TC-1";
+            JiraProjectId = "RES";
+            TestCaseId = "RES-TC-1";
 
             jira = new JiraTestCaseManager();
 
@@ -70,10 +72,10 @@ namespace PrismApp.Modules.CaseRunner
             };
         }
         
-        async Task<AioTestCase> ICaseRunnerService.Feature1()
+        async Task<AioTestCase> ICaseRunnerService.Feature1(string testCaseId)
         {
             Message = "1) GetTestCaseDetailAsync";
-            var detail = await jira.GetTestCaseDetailAsync(jiraProjectId, testCaseId);
+            var detail = await jira.GetTestCaseDetailAsync(JiraProjectId, testCaseId);
             var testCase = System.Text.Json.JsonSerializer.Deserialize<AioTestCase>(detail);
             var parser = new TestCaseParser(new List<IStepParser>());
             var parsed = parser.ParseAioTestCase(testCase);
@@ -89,45 +91,31 @@ namespace PrismApp.Modules.CaseRunner
             return testCase;
         }
 
-        async void ICaseRunnerService.Feature2()
+        async void ICaseRunnerService.Feature2(string testCaseId)
         {
             Message = "2) UploadAttachmentToTestCaseAsync";
-            var success = await jira.UploadAttachmentToTestCaseAsync(jiraProjectId, testCaseId, @"C:\Users\jcy1236\AppData\Local\CMakeTools\log.txt");
+            var success = await jira.UploadAttachmentToTestCaseAsync(JiraProjectId, testCaseId, @"C:\Users\jcy1236\AppData\Local\CMakeTools\log.txt");
             Console.WriteLine(success ? "Attachment uploaded successfully." : "Failed to upload attachment.");
         }
 
-        async void ICaseRunnerService.Feature3()
+        async void ICaseRunnerService.Feature3(string testCaseId)
         {
             Message = "3) UploadAttachmentToTestCaseRTFFieldAsync";
-            var success = await jira.UploadAttachmentToTestCaseRTFFieldAsync(jiraProjectId, testCaseId, "DESCRIPTION", @"C:\Users\jcy1236\AppData\Local\CMakeTools\log.txt");
+            var success = await jira.UploadAttachmentToTestCaseRTFFieldAsync(JiraProjectId, testCaseId, "DESCRIPTION", @"C:\Users\jcy1236\AppData\Local\CMakeTools\log.txt");
             Console.WriteLine(success ? "RTF field attachment uploaded successfully." : "Failed to upload RTF field attachment.");
         }
         
-        async void ICaseRunnerService.Feature4()
+        async void ICaseRunnerService.Feature4(AioTestCase newCase)
         {
             Message = "4) CreateTestCaseAsync";
-            var result = await jira.CreateTestCaseAsync(jiraProjectId, newCase);
+            var result = await jira.CreateTestCaseAsync(JiraProjectId, newCase);
             Console.WriteLine(result ?? "Failed to create test case.");
         }
 
-        async void ICaseRunnerService.Feature5()
+        async Task<IEnumerable<AioTestCase>> ICaseRunnerService.Feature5Async()
         {
             Message = "5) GetTestCasesAsync";
-            var result = await jira.GetTestCasesAsync(jiraProjectId);
-            foreach ( var res in result )
-            {
-                Console.WriteLine(res);
-            }
-        }
-
-        string ICaseRunnerService.dummy1()
-        {
-            return "CaseRunner is idle.";
-        }
-
-        void ICaseRunnerService.dummy2(string caseId)
-        {
-            // 여기에 테스트 케이스 실행 로직을 구현합니다.
+            return await jira.GetTestCasesAsync(JiraProjectId);
         }
     }
 }

@@ -219,20 +219,19 @@ namespace PrismApp.Modules.CaseRunner.Models
 
         private AioTestCase MapToTestCase(AioTestCase aioTestCase)
         {
-            return null;
-            //return new AioTestCase
-            //{
-            //    Key = aioTestCase.Key,
-            //    Title = aioTestCase.Title,
-            //    Description = aioTestCase.Description,
-            //    Steps = aioTestCase.Steps?.Select((step, index) => new AioTestStep
-            //    {
-            //        Order = index + 1,
-            //        Action = step.Action,
-            //        Data = step.Data,
-            //        ExpectedResult = step.ExpectedResult
-            //    }).ToList() ?? new List<AioTestStep>()
-            //};
+            return new AioTestCase
+            {
+                Key = aioTestCase.Key,
+                Title = aioTestCase.Title,
+                Description = aioTestCase.Description,
+                Steps = aioTestCase.Steps?.Select((step, index) => new AioStepDto
+                {
+                    Step = step.Step,
+                    Data = step.Data,
+                    ExpectedResult = step.ExpectedResult,
+                    ID = index + 1
+                }).ToList() ?? new List<AioStepDto>()
+            };
         }
 
 

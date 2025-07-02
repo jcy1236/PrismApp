@@ -5,17 +5,85 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="400"
+             d:DesignHeight="1000" d:DesignWidth="2500"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True" >
     <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-            <TextBlock Text="{Binding Message, Mode=TwoWay}" FontSize="16" HorizontalAlignment="Center"/>
-            <Button Content="Feature1" Command="{Binding Feature1Command}" Width="120"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!-- 좌측 사이드바 -->
+        <StackPanel Grid.Column="0" Grid.RowSpan="3" Background="#F0F0F0" VerticalAlignment="Stretch">
+            <TextBlock Text="ProjectInfo" FontWeight="Bold" FontSize="12" Margin="10"/>
+            <!-- 필요시 메뉴/버튼 추가 -->
+            <TextBlock Text="Project ID" FontWeight="Bold" FontSize="12" Margin="10" />
+            <TextBox Margin="5" Text="Enter Project ID" />
+            <Button Content="Get All TestCases" Command="{Binding Feature5Command}" Width="120"/>
+                
+            <TextBlock Text="TestCase List" FontWeight="Bold" FontSize="12" Margin="10"/>
+            <ListBox ItemsSource="{Binding AioTestCases}" DisplayMemberPath="Key" VerticalAlignment="Stretch" Height="100" Margin="0,10,0,0"
+                     SelectedItem="{Binding SelectedTestCase, Mode=TwoWay}"/>
+
+            <TextBlock Text="Test Button" FontWeight="Bold" FontSize="12" Margin="10"/>
+            <Button Content="Get TestCase Detail" Command="{Binding Feature1Command}" Width="120"/>
             <Button Content="Feature2" Command="{Binding Feature2Command}" Width="120"/>
             <Button Content="Feature3" Command="{Binding Feature3Command}" Width="120"/>
             <Button Content="Feature4" Command="{Binding Feature4Command}" Width="120"/>
-            <Button Content="Feature5" Command="{Binding Feature5Command}" Width="120"/>
         </StackPanel>
+        <GroupBox Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Header="Selected TestCase Info" Margin="20" Padding="10">
+            <StackPanel Grid.Column="1" Grid.Row="1" Margin="10">
+                <!-- 단일 객체 바인딩: ContentControl 사용 -->
+                <Border CornerRadius="8" BorderBrush="#DDD" BorderThickness="1" Padding="16" Background="#FAFAFA" Margin="0,0,0,10" >
+                    <StackPanel>
+                        <TextBlock Text="Test Case Details" FontWeight="Bold" FontSize="16" Foreground="#2D6A4F" Margin="0,0,0,12"/>
+                        <UniformGrid Columns="2" Rows="7" Margin="0,0,0,0" DataContext="{Binding SelectedTestCase}">
+                            <TextBlock Text="ID:" FontWeight="SemiBold" Foreground="#555" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding Id}" Margin="0,0,0,4" VerticalAlignment="Center"/>
+                            <TextBlock Text="Key:" FontWeight="SemiBold" Foreground="#555" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding Key}" Margin="0,0,0,4" VerticalAlignment="Center"/>
+                            <TextBlock Text="Title:" FontWeight="SemiBold" Foreground="#555" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding Title}" Margin="0,0,0,4" VerticalAlignment="Center"/>
+                            <TextBlock Text="Description:" FontWeight="SemiBold" Foreground="#555" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding Description}" Margin="0,0,0,4" TextWrapping="Wrap" VerticalAlignment="Center"/>
+                            <TextBlock Text="Status:" FontWeight="SemiBold" Foreground="#555" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding Status.Name}" Margin="0,0,0,4" VerticalAlignment="Center"/>
+                            <TextBlock Text="Created Date:" FontWeight="SemiBold" Foreground="#555" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding CreatedDate}" Margin="0,0,0,4" VerticalAlignment="Center"/>
+                            <TextBlock Text="Owner:" FontWeight="SemiBold" Foreground="#555" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding OwnedByID}" Margin="0,0,0,4" VerticalAlignment="Center"/>
+                        </UniformGrid>
+                    </StackPanel>
+                </Border>
+                <Border CornerRadius="8" BorderBrush="#DDD" BorderThickness="1" Padding="16" Background="#FAFAFA" Margin="0,0,0,10">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Steps" FontWeight="Bold" FontSize="16" Foreground="#2D6A4F" Margin="0,0,0,12"/>
+                        <ListView ItemsSource="{Binding SelectedTestCase.Steps}" >
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}" />
+                                    <GridViewColumn Header="Step" DisplayMemberBinding="{Binding Step}" />
+                                    <GridViewColumn Header="Data" DisplayMemberBinding="{Binding Data}" />
+                                    <GridViewColumn Header="ExpectedResult" DisplayMemberBinding="{Binding ExpectedResult}" />
+                                    <!--<GridViewColumn Header="StepType" DisplayMemberBinding="{Binding StepType}" />-->
+                                    <GridViewColumn Header="Attachments" DisplayMemberBinding="{Binding Attachments}" />
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </GroupBox>
+        <!-- 우측 영역 -->
+        <GroupBox Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Height="auto"  Header="RESULT" VerticalAlignment="Top" Margin="20">
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock Text="{Binding Message, Mode=TwoWay}" FontSize="16" VerticalAlignment="Center" />
+            </StackPanel>
+        </GroupBox>
     </Grid>
 </UserControl>

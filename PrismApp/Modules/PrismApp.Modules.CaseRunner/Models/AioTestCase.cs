@@ -6,9 +6,6 @@ namespace PrismApp.Modules.CaseRunner.Models
 {
     public class AioTestCase
     {
-        [JsonPropertyName("ID")]
-        public int ID { get; set; }
-
         [JsonPropertyName("jiraProjectID")]
         public int JiraProjectID { get; set; }
 
@@ -48,14 +45,8 @@ namespace PrismApp.Modules.CaseRunner.Models
         [JsonPropertyName("type")]
         public TypeDataDto Type { get; set; }
 
-        [JsonPropertyName("jiraComponentID")]
-        public object JiraComponentID { get; set; }
-
         [JsonPropertyName("jiraComponentIDs")]
         public List<object> JiraComponentIDs { get; set; }
-
-        [JsonPropertyName("jiraReleaseID")]
-        public object JiraReleaseID { get; set; }
 
         [JsonPropertyName("jiraReleaseIDs")]
         public List<object> JiraReleaseIDs { get; set; }
@@ -93,8 +84,8 @@ namespace PrismApp.Modules.CaseRunner.Models
         [JsonPropertyName("jiraRequirementIDs")]
         public List<object> JiraRequirementIDs { get; set; }
 
-        [JsonPropertyName("versions")]
-        public List<AioVersionDto> Versions { get; set; }
+        [JsonPropertyName("ID")]
+        public int ID { get; set; }
     }
 
     public class AioPermissionDto
@@ -117,9 +108,6 @@ namespace PrismApp.Modules.CaseRunner.Models
 
     public class AioScriptTypeDto
     {
-        [JsonPropertyName("ID")]
-        public int ID { get; set; }
-
         [JsonPropertyName("name")]
         public string Name { get; set; }
 
@@ -128,13 +116,13 @@ namespace PrismApp.Modules.CaseRunner.Models
 
         [JsonPropertyName("isEnabled")]
         public bool IsEnabled { get; set; }
+        
+        [JsonPropertyName("ID")]
+        public int ID { get; set; }
     }
 
     public class AioStepDto
     {
-        [JsonPropertyName("ID")]
-        public int ID { get; set; }
-
         [JsonPropertyName("step")]
         public string Step { get; set; }
 
@@ -167,6 +155,9 @@ namespace PrismApp.Modules.CaseRunner.Models
 
         [JsonPropertyName("expectedResultAttachments")]
         public List<AttachmentDto> ExpectedResultAttachments { get; set; }
+        
+        [JsonPropertyName("ID")]
+        public int ID { get; set; }
     }
 
     public class ReferencedCaseDto
@@ -237,7 +228,11 @@ namespace PrismApp.Modules.CaseRunner.Models
     {
         [JsonPropertyName("name")]
         public string Name { get; set; }
-        // public bool IsArchived { get; set; }
-        // public int ID { get; set; }
+
+        [JsonPropertyName("isArchived")]
+        public bool IsArchived { get; set; }
+
+        [JsonPropertyName("ID")]
+        public int ID { get; set; }
     }
 }
