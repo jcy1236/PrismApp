@@ -31,7 +31,7 @@ namespace PrismApp.Modules.CaseRunner.Models
         public string OwnedByID { get; set; }
 
         [JsonPropertyName("folder")]
-        public string Folder { get; set; }
+        public FolderDataDto Folder { get; set; }
 
         [JsonPropertyName("status")]
         public AioStatusDto Status { get; set; }
@@ -92,6 +92,15 @@ namespace PrismApp.Modules.CaseRunner.Models
     {
         [JsonPropertyName("value")]
         public int Value { get; set; }
+    }
+
+    public class FolderDataDto
+    {
+        [JsonPropertyName("ID")]
+        public int ID { get; set; }
+
+        [JsonPropertyName("name")]
+        public string Name { get; set; }
     }
 
     public class AioStatusDto
