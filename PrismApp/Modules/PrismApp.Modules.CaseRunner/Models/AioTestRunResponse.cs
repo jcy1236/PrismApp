@@ -3,18 +3,18 @@ using System.Text.Json.Serialization;
 
 namespace PrismApp.Modules.CaseRunner.Models
 {
-    public class AioTestCaseResponse
+    public class AioTestRunResponse
     {
-        [JsonPropertyName("items")]
-        public List<AioTestCase>? Items { get; set; }
+        [JsonPropertyName("testruns")]
+        public List<AioTestRun>? TestRuns { get; set; }
+
+        [JsonPropertyName("total")]
+        public int? Total { get; set; }
 
         [JsonPropertyName("startAt")]
         public int? StartAt { get; set; }
 
         [JsonPropertyName("maxResults")]
         public int? MaxResults { get; set; }
-
-        [JsonPropertyName("isLast")]
-        public bool? IsLast { get; set; }
     }
 }

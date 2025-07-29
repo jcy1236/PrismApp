@@ -184,30 +184,6 @@ namespace PrismApp.Modules.CaseRunner.Models
         public int Version { get; set; }
     }
 
-    public class AttachmentDto
-    {
-        [JsonPropertyName("ID")]
-        public int ID { get; set; }
-
-        [JsonPropertyName("name")]
-        public string Name { get; set; }
-
-        [JsonPropertyName("mimeType")]
-        public string MimeType { get; set; }
-
-        [JsonPropertyName("size")]
-        public long Size { get; set; }
-
-        [JsonPropertyName("checksum")]
-        public string Checksum { get; set; }
-
-        [JsonPropertyName("ownerId")]
-        public string OwnerId { get; set; }
-
-        [JsonPropertyName("createdDate")]
-        public DateTime CreatedDate { get; set; }
-    }
-
     public class AioVersionDto
     {
         [JsonPropertyName("version")]
